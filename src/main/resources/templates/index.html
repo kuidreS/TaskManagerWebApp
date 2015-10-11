@@ -1,3 +1,125 @@
-<div>
-    <p>Hello!</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Task Manager</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--controllers-->
+    <script type="text/javascript" src="applicationCtrl.js"></script>
+
+</head>
+<style>
+    table, th , td  {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    table, th {
+        text-align: center;
+        border-
+    }
+    table, caption {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+        color: #000;
+        background-color: #FF9938;
+    }
+    table tr:nth-child(odd)	{
+        background-color: #FFC448;
+    }
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+    .inner-addon {
+        position: relative;
+    }
+    .inner-addon .glyphicon {
+        position: absolute;
+        padding: 5px;
+        pointer-events: none;
+    }
+    .right-addon .glyphicon {
+        right: 0px;
+    }
+    .right-addon input {
+        padding-right: 30px;
+    }
+    textarea {
+        vertical-align: top;
+    }
+</style>
+<body ng-app="taskApp" ng-controller="ApplicationCtrl">
+
+    <form>
+        <div class="task-body">
+            <table align="center" style="width:1024px; margin-top: 70px;" ng-hide="!IsHidden">
+                <caption>
+                    <div align="center"><b>Task Manager</b></div>
+                    <div>
+                        <div class="task-header" style="display: inline-block;">
+                            <button type="button" style="background-color:#41915D; color: #fff; width: 60px;" ng-click="showAddTask()">
+                                <span class="glyphicon glyphicon-plus"><b>Task</b></span>
+                            </button>
+                            <div class="inner-addon right-addon" style="display: inline-block;" align="right"><i class="glyphicon glyphicon-search"></i><input placeholder="Search" ng-model="searchText" /></div>
+                        </div>
+                    </div>
+                </caption>
+                <tr>
+                    <th style="width:35px;">№</th>
+                    <th style="width:145px;">Name</th>
+                    <th style="width:700px;">Description</th>
+                    <th style="width:100px;">Priority</th>
+                </tr>
+                <tr ng-repeat="task in tasks | filter:searchText">
+                    <td>{{ $index + 1 }}</td>
+                    <td align="left">{{task.name}}</td>
+                    <td align="left">{{task.description}}</td>
+                    <td align="left">{{task.priority}}</td>
+                </tr>
+            </table>
+            <div ng-hide="IsHidden">
+                <table align="center" style="width:420px; margin-top: 70px;">
+                    <caption>
+                        <div align="center"><b>Task Manager</b></div>
+                    </caption>
+                    <tr>
+                        <td>
+                            <div>
+                                <label style="float:right;" >
+                                    Task name: <input style="width:320px;" type="text" ng-model="name" />
+                                </label>
+                            </div>
+                            <div>
+                                <label style="float:left;">
+                                    Description: <textarea type="text" ng-model="description" rows="5" style="width: 320px;"/>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="repeatSelect" style="float:right;">
+                                    Priority:
+                                    <select name="repeatSelect" id="repeatSelect" ng-model="priority" style="width: 320px;">
+                                        <option ng-repeat="option in priorities" value="{{option}}">{{option}}</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div>
+                                <button type="button" style="background-color:#41915D; color: #fff; width: 60px; float:right;" ng-click="addTask()">
+                                    <span class="glyphicon glyphicon-floppy-disk"><b>Save</b></span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

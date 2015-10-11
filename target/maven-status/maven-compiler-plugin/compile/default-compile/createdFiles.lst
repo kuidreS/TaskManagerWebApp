@@ -1,4 +1,6 @@
 com\task\manager\Application.class
 com\task\manager\controller\MainCtrl.class
+com\task\manager\controller\TaskCtrl.class
+com\task\manager\model\dto\TaskDto.class
+com\task\manager\model\repository\TaskRepository.class
 com\task\manager\model\entity\Task.class
-com\task\manager\model\repository\TestRepository.class

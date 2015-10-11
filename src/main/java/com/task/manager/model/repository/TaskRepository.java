@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Vitalii on 17.09.2015.
  */
-public interface TestRepository extends CrudRepository<Task, Integer> {
+public interface TaskRepository extends CrudRepository<Task, Integer> {
 
     Task findByName(String name);
 

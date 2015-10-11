@@ -1,4 +1,6 @@
-C:\Users\Vitalii\Desktop\WebTaskManagerApp\src\main\java\com\task\manager\Application.java
-C:\Users\Vitalii\Desktop\WebTaskManagerApp\src\main\java\com\task\manager\controller\MainCtrl.java
-C:\Users\Vitalii\Desktop\WebTaskManagerApp\src\main\java\com\task\manager\model\repository\TestRepository.java
-C:\Users\Vitalii\Desktop\WebTaskManagerApp\src\main\java\com\task\manager\model\entity\Task.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\Application.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\controller\TaskCtrl.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\model\dto\TaskDto.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\model\entity\Task.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\controller\MainCtrl.java
+C:\Users\Vitalii\Java\JavaPr\WebTaskManagerApp\src\main\java\com\task\manager\model\repository\TaskRepository.java
