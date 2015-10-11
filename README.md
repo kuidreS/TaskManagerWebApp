@@ -5,7 +5,8 @@
 ## Demo
 
 **task table**
-`CREATE TABLE task
+
+CREATE TABLE task
 (
   id bigint NOT NULL,
   date timestamp without time zone NOT NULL,
@@ -14,7 +15,7 @@
   priority character varying(256) NOT NULL,
   status character varying(256) NOT NULL,
   CONSTRAINT task_pkey PRIMARY KEY (id)
-)`
+)
 
 https://drive.google.com/file/d/0B8idIAISylXFUXZBaEdvSGhielk/view?usp=sharing
 
