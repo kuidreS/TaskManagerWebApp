@@ -1,5 +1,5 @@
 # TaskManagerWebApp 
-## Spring Data JPA + Hibernate + PostgreSQL + Spring MVC
+## Spring Data JPA + Hibernate + PostgreSQL + Spring MVC + AngularJS
 **Project description:** Task manager is Java web application for creating task and saving it in database. Task consists of: task name, task description, task status, task priority, task date.
 
 ## Demo
